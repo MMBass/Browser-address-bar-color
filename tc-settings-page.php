@@ -6,7 +6,7 @@
 
         <div style="background-color:#075B9A; width: 100%; padding-top:1px; padding-bottom: 20px; font-size: 20px;">
            <h3 style="font-family:roboto; font-weight: 400; color:#60CAF6;">Chose Your Colors</h3>
-           <p style="color:#ffffff; font-size: 20px; line-height: 0;">:Select The Page You Want To Effect</p>
+           <p style="color:#ffffff; font-size: 20px; line-height: 0;">:Select The Page You Want To affect</p>
         </div>
         
         <form style="" target="_self"  method="POST">    
