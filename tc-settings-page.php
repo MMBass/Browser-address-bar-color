@@ -1,12 +1,12 @@
 <div style="margin-right:10%; margin-top: 20px; width: 80%; background-color:#E2E2E2; text-align:center; align-items:center; font-family:Gill Sans,sans-serif; padding-top:10px; height: 80%; font-weight: 600; font-family: roboto">
 
         <div style="color: #6E7274; text-align:left;">
-            <h2 style="margin-left: 10px; color: #6E7274; font-size: 35px; font-family:roboto; font-weight: 400;">Browsers Theme Color</h2>
+            <h2 style="margin-left: 10px; color: #6E7274; font-size: 35px; font-family:roboto; font-weight: 400;">Browsers theme color</h2>
         </div>
 
         <div style="background-color:#075B9A; width: 100%; padding-top:1px; padding-bottom: 20px; font-size: 20px;">
-           <h3 style="font-family:roboto; font-weight: 400; color:#60CAF6;">Chose Your Colors</h3>
-           <p style="color:#ffffff; font-size: 20px; line-height: 0;">:Select The Page You Want To affect</p>
+           <h3 style="font-family:roboto; font-weight: 400; color:#60CAF6;">Chose your colors</h3>
+           <p style="color:#ffffff; font-size: 20px; line-height: 0;">:Select the page you want to affect</p>
         </div>
         
         <form style="" target="_self"  method="POST">    
