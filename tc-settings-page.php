@@ -1,23 +1,23 @@
-<div style="margin-right:10%; margin-top: 20px; width: 80%; background-color:#E2E2E2; text-align:center; align-items:center; font-family:Gill Sans,sans-serif; padding-top:10px; height: 80%; font-weight: 800;">
+<div style="margin-right:10%; margin-top: 20px; width: 80%; background-color:#E2E2E2; text-align:center; align-items:center; font-family:Gill Sans,sans-serif; padding-top:10px; height: 80%; font-weight: 600; font-family: roboto">
 
-        <div style="color: #6E7274;">
-            <h2 style="color: #6E7274; font-size: 35px;"> Theme Color - For Browsers</h2>
+        <div style="color: #6E7274; text-align:left;">
+            <h2 style="margin-left: 10px; color: #6E7274; font-size: 35px; font-family:roboto; font-weight: 400;">Browsers Theme Color</h2>
         </div>
 
-        <div style="background-color:#075B9A; width: 100%; height: 60px; padding-top:1px; padding-bottom: 20px;">
-           <h3  style="font-family:Gill Sans,sans-serif; font-size:30px; font-weight: 600; color:#60CAF6;">:Chose Your Color</h3>
+        <div style="background-color:#075B9A; width: 100%; padding-top:1px; padding-bottom: 20px; font-size: 20px;">
+           <h3 style="font-family:roboto; font-weight: 400; color:#60CAF6;">Chose Your Colors</h3>
+           <p style="color:#ffffff; font-size: 20px; line-height: 0;">:Select The Page You Wnat To Effect</p>
         </div>
         
-        <form style="" target="_self" method="POST">    
+        <form style="" target="_self"  method="POST">    
            <input type="hidden" name="color-posted">    
             <br>
-            <br>
-            <p>:Select The Page You Wnat To Effect</p>
+           
             <div id="pages_div">
               <div style="background-color: #fff; padding: 4px; direction: ltr; margin-top: 5px; height:40px;">
                 <div style="float: left;">
                     <input type="checkbox" id="cbox_all" name="check-color-all" style=" " <?php echo isset(get_option('tc_pages_list')["all"]) ? "checked" : null; ?>>
-                    <p style="color: #3e4347; display: inline; margin: 22px; font-size: 22px">All Pages:</p>
+                    <p style="color: #3e4347; display: inline; margin: 22px; font-size: 20px">All Pages:</p>
                 </div> 
                <input type="color" id="input_all" name="input-color-all" style="width:50%; padding: 2px 8px; height:35px; float: right; box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.1);" value="<?php echo get_option('tc_pages_list')["all"];?>"> 
                <input type="text" id="txt-cover-inp-all" style="width:50%; padding: 2px 8px; height:35px; float: right; display:none;" value="Not Selected" disabled>
@@ -46,7 +46,7 @@
                             $option .= $curr_checked;
                             $option .= '>';
                             $option .= '<input type="checkbox" class="check-cover-input" style="display: none;" checked disabled>';
-                            $option .= '<p style="color: #0970be; display: inline; margin: 22px; font-size: 20px">';
+                            $option .= '<p style="color: #0970be; display: inline; margin: 22px; font-size: 18px">';
                             $option .= $page->post_title;
                             $option .= ':</p>';
                         $option .= '</div>';
@@ -66,11 +66,10 @@
             </div>
             
             <br>
-            <button id="save_color_btn" type="submit" style="margin-top:20px; background:#bbe1e7; font-family:Gill Sans,sans-serif; font-size:15px; color: #0C5460; border: none; padding: 15px 32px; box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.1);">Save Changes</button>
+            <button id="save_color_btn" type="submit" style="margin-top:20px; background:#bbe1e7; font-family: roboto; font-size:15px; color: #0C5460; border: none; padding: 15px 32px; box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.1);">Save Changes</button>
 
         </form>
 
         <div style="background-color:#41535C; height:40px; margin-top:20px;">
         </div>
-        <script src="../wp-content/plugins/theme-color-plugin/tc-script.js"></script>
     </div>
