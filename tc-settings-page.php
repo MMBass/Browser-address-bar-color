@@ -22,7 +22,7 @@
                <input type="color" id="input_all" name="input-color-all" style="width:50%; padding: 2px 8px; height:35px; float: right; box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.1);" value="<?php echo get_option('tc_pages_list')["all"];?>"> 
                <input type="text" id="txt-cover-inp-all" style="width:50%; padding: 2px 8px; height:35px; float: right; display:none;" value="Not Selected" disabled>
               </div>
-              <hr style="width: 80%;">
+              <hr style="width: 80%; color: #075B9A">
 
               <?php 
                 $allPages = get_pages(); 

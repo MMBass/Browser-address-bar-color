@@ -9,7 +9,7 @@ Plugin URI: https://github.com/MMBass/theme_color_plugin_for_wordpress
 Description: Custom URL bar color for every page of your site, Works only on mobile browser
 Author: Mendi Bass
 Author URI: https://github.com/MMBass
-Version: 0.0.1
+Version: 0.1.0
 License: GPL v2 or later
 Text Domain: browser-address-bar-theme-color 
 Domain Path: /languages
@@ -33,7 +33,7 @@ $pluginLocation = plugin_basename(__FILE__);
 add_filter("plugin_action_links_$pluginLocation", 'linkToSettingsPage' );
 
 function addMenu(){
-    add_menu_page("Theme Color", "Theme Color", 'manage_options', "tc_options", "themeColorSettingsPage",'dashicons-color-picker');
+    add_menu_page("Browser Theme Color", "Browser Theme Color", 'manage_options', "tc_options", "themeColorSettingsPage",'dashicons-color-picker');
 }
 
 
