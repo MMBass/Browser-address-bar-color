@@ -2,9 +2,9 @@
 
 Contributors: mendibass
 Plugin Name: Browser Address Bar Color 
-Plugin URI:  https://basssites.com/plugins
+Plugin URI:  https://github.com/MMBass/theme_color_plugin_for_wordpress
 Tags: address bar, browser, theme color, url bar, uri  bar, address bar color, mobile theme color
-Author URI: https://basssites.com
+Author URI: https://github.com/MMBass
 Author: Mendi Bass
 Requires at least: 3.0
 Tested up to: 5.5.3
