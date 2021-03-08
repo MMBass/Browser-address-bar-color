@@ -3,7 +3,7 @@
 Contributors: mendibass
 Plugin Name: Browser Address Bar Color 
 Plugin URI:  https://github.com/MMBass/theme_color_plugin_for_wordpress
-Tags: address bar, browser, theme color, url bar, uri  bar, address bar color, mobile theme color
+Tags: address bar, browser, theme color,meta tag, url bar, uri  bar, address bar color, mobile theme color
 Author URI: https://github.com/MMBass
 Author: Mendi Bass
 Requires at least: 3.0
@@ -11,6 +11,11 @@ Tested up to: 5.5.3
 Stable tag: 1.0 
 
 == Description ==
+paint the top address bar of a selected page, you can chose all the pages same color, or just paint one page, or several pages , or differente color to each page.
+
+this functionallity doesnt exist in desktop browsers yet, 
+and our plugin working on all those mobile browsers: 
+Chrome, Samsung Internet, Safari IOS (apple).
 
 == Installation ==
 
@@ -38,5 +43,10 @@ Or:
 * First upload
 
 == Frequently Asked Questions ==
+
+what's your plugin's specialty?
+you can chose differente color for each page of your site, not only one for all of theme.
+
+its not working in my mobile 
 
 == Donations ==

@@ -90,7 +90,7 @@ function head_add(){
         if (array_key_exists("all",$tc_pages_list )){
             if(!empty($tc_pages_list["all"])){
                 ?>
-                <!-- Chrome, Firefox OS and Opera -->
+                <!-- Chrome, Samsung internet -->
                 <meta name="theme-color" content="<?php echo $tc_pages_list["all"]; ?>">
                 <!-- Windows Phone -->
                 <meta name="msapplication-navbutton-color" content="<?php echo $tc_pages_list["all"]; ?>">
@@ -104,7 +104,7 @@ function head_add(){
             foreach ($tc_pages_list as $page => $color) {
                 if (is_page($page)){
                     ?>
-                    <!-- Chrome, Firefox OS and Opera -->
+                    <!-- Chrome, Samsung internet -->
                     <meta name="theme-color" content="<?php echo $color; ?>">
                     <!-- Windows Phone -->
                     <meta name="msapplication-navbutton-color" content="<?php echo $color; ?>">
