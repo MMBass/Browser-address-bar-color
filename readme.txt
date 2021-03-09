@@ -45,8 +45,6 @@ Or:
 == Frequently Asked Questions ==
 
 what's your plugin's specialty?
-you can choose different color for each page of your site, not only one for all of them.
-
-its not working in my mobile 
+you can choose different color for each page of your site, not only one for all of them
 
 == Donations ==
