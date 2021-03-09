@@ -4,7 +4,7 @@
  * @package Browser Address Bar Color
 */
 /*
-Plugin Name:Browser Address Bar Color 
+Plugin Name: Browser Address Bar Color 
 Plugin URI: https://github.com/MMBass/theme_color_plugin_for_wordpress
 Description: Custom URL bar color for each page of your site. Currently only works in mobile browsers.
 Author: Mendi Bass

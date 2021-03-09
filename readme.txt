@@ -11,10 +11,11 @@ Tested up to: 5.5.3
 Stable tag: 1.0 
 
 == Description ==
-paint the top address bar of a selected page, you can choose all the pages same color, or just paint one page, or several pages , or differente color to each page.
 
-this functionality doesnt exist in desktop browsers yet, 
-and our plugin working on all those mobile browsers: 
+paint the top address bar of a selected page, you can choose every page different color.
+
+doesnt work in desktop browsers yet, 
+working on all those mobile browsers: 
 Chrome, Samsung Internet, Safari IOS (apple).
 
 == Installation ==
@@ -39,12 +40,19 @@ Or:
 3. the settings page
 
 == Changelog ==
-= 0.0.1 =
+= 1.0 =
 * First upload
 
 == Frequently Asked Questions ==
 
-what's your plugin's specialty?
-you can choose different color for each page of your site, not only one for all of them
+= what's your plugin's specialty? = 
+
+you can choose different colors for each page of your site, not only one for all of them
+
+= Why it doesn't work on desktop browsers? =
+
+For now the plugin is not functional in desktop browsers but according to google it should be available soon in chrome for PC.
+
+== Upgrade Notice ==
 
 == Donations ==
