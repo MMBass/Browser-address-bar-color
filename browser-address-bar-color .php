@@ -33,7 +33,7 @@ $pluginLocation = plugin_basename(__FILE__);
 add_filter("plugin_action_links_$pluginLocation", 'linkToSettingsPage' );
 
 function addMenu(){
-    add_menu_page("Browser Theme Color", "Browser Theme Color", 'manage_options', "tc_options", "themeColorSettingsPage",'dashicons-color-picker');
+    add_menu_page("Browser Address Bar Color", "Browser Address Bar Color", 'manage_options', "tc_options", "themeColorSettingsPage",'dashicons-color-picker');
 }
 
 

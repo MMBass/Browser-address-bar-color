@@ -6,6 +6,8 @@ Plugin URI:  https://github.com/MMBass/theme_color_plugin_for_wordpress
 Tags: address bar, browser, theme color,meta tag, url bar, uri  bar, address bar color, mobile theme color
 Author URI: https://github.com/MMBass
 Author: Mendi Bass
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.0
 Tested up to: 5.5.3
 Stable tag: 1.0 

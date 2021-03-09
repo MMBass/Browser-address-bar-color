@@ -5,8 +5,8 @@
         </div>
 
         <div style="background-color:#075B9A; width: 100%; padding-top:1px; padding-bottom: 20px; font-size: 20px;">
-           <h3 style="font-family:roboto; font-weight: 400; color:#60CAF6;">Chose your colors</h3>
-           <p style="color:#ffffff; font-size: 20px; line-height: 0;">:Select the page you want to affect</p>
+           <h3 style="font-family:roboto; font-weight: 400; color:#60CAF6;">Choose your colors</h3>
+           <p style="color:#ffffff; font-size: 20px; line-height: 0;">Select the pages that you'd like to add a color to:</p>
         </div>
         
         <form style="" target="_self"  method="POST">    
