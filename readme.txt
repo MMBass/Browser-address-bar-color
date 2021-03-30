@@ -9,7 +9,7 @@ Author: Mendi Bass
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.0
-Tested up to: 5.5.3
+Tested up to: 5.7
 Stable tag: 1.0 
 
 == Description ==
@@ -25,16 +25,16 @@ Chrome, Samsung Internet, Safari IOS (apple).
 1. From your WordPress Dashboard go to 'Plugins' > 'Add new' and search for 'Browser Address Bar Color'.
 2. Click 'Install Now' under the title of the Call Now Button plugin
 3. Click 'activate'
-4. Look at the wordpress menu and you will see the new "Browser Theme Color" settings page, there you can activate and manage the colors and the colors.
+4. In the wordpress menu click the 'Appearance' and you will see the new "Address bar color" settings page, there you can activate and manage the pages and the colors.
 
 Or:
 
-1. Click download in this page and download the "Browser Address Bar Color.zip" file
-2. From your WordPress Dashboard go to 'Plugins' > 'Upload plugin' and select the 'Browser Address Bar Color' zip file
+1. Click download in this page and download the "browser-address-bar-color.zip" file
+2. From your WordPress Dashboard go to 'Plugins' > 'Upload plugin' and select the "browser-address-bar-color.zip" file
 3. Click 'install'
 4. Click 'activate'
 5. Activate the plugin through the 'Plugins' menu in WordPress
-6. Look at the wordpress menu and you will see the new "Browser Theme Color" settings page, there you can activate and manage the colors and the colors.
+4. In the wordpress menu click the 'Appearance' and you will see the new "Address bar color" settings page, there you can activate and manage the pages and the colors.
 
 == Screenshots ==
 1. the result
