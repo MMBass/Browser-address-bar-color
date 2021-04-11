@@ -19,11 +19,18 @@ if ( !defined( 'ABSPATH' ) ){
     die;
 } 
 
+function babc_load_textdomain(){
+    load_plugin_textdomain( 'browser-address-bar-theme-color', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+};
+
+add_action( 'init', 'babc_load_textdomain' );
+
 function babcOnActivate(){
     if(!get_option('babc_pages_list')){
         // add a new option - '$new_babc_pages_list' by default on plugin's start;
         add_option('babc_pages_list', $new_babc_pages_list);
     }
+    
 }
 register_activation_hook( __FILE__, 'babcOnActivate' );
 
