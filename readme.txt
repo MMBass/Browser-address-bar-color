@@ -37,7 +37,7 @@ Or:
 4. In the wordpress menu click the 'Appearance' and you will see the new "Address bar color" settings page, there you can activate and manage the pages and the colors.
 
 == Screenshots ==
-1. the result
+1. 
 2. the new menu item 
 3. the settings page
 
