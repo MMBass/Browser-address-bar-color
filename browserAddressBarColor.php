@@ -9,9 +9,9 @@ Plugin URI: https://github.com/MMBass/theme_color_plugin_for_wordpress
 Description: Custom URL bar color for each page of your site. Currently only works in mobile browsers.
 Author: Mendi Bass
 Author URI: https://github.com/MMBass
-Version: 1.0
+Version: 2.0
 License: GPL v2 or later
-Text Domain: browser-address-bar-theme-color 
+Text Domain: browser-address-bar-color 
 Domain Path: /languages
 */
 
@@ -19,18 +19,11 @@ if ( !defined( 'ABSPATH' ) ){
     die;
 } 
 
-function babc_load_textdomain(){
-    load_plugin_textdomain( 'browser-address-bar-theme-color', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-};
-
-add_action( 'init', 'babc_load_textdomain' );
-
 function babcOnActivate(){
     if(!get_option('babc_pages_list')){
         // add a new option - '$new_babc_pages_list' by default on plugin's start;
         add_option('babc_pages_list', $new_babc_pages_list);
     }
-    
 }
 register_activation_hook( __FILE__, 'babcOnActivate' );
 
@@ -43,7 +36,6 @@ function babcAddMenu(){
     add_submenu_page( 'themes.php', "Browser Address Bar Color", "Address Bar Color", 'manage_options', "babc-options","babcThemeColorSettingsPage", 1 );
 }
 
-
 function babcLinkToSettingsPage($links) { 
     $babc_settings_link = '<a href="themes.php?page=babc-options">Settings</a>'; 
     array_unshift($links, $babc_settings_link);
@@ -55,7 +47,6 @@ function babcThemeColorSettingsPage(){
     $babc_curr_pages_arr = get_option('babc_pages_list');
 
     wp_enqueue_script( 'babc-script', plugins_url('babcScript.js', __FILE__ ));
-    wp_enqueue_style( 'Roboto', 'https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
     if(isset($_POST['color-posted'])){
 
@@ -108,28 +99,18 @@ function babcHeadAdd(){
                 ?>
                 <!-- Chrome, Samsung internet -->
                 <meta name="theme-color" content="<?php echo $babc_pages_list["all"]; ?>">
-                <!-- Windows Phone -->
-                <meta name="msapplication-navbutton-color" content="<?php echo $babc_pages_list["all"]; ?>">
-                <!-- iOS Safari -->
-                <meta name="apple-mobile-web-app-status-bar-style" content="<?php echo $babc_pages_list["all"]; ?>">
-                <meta name="theme-color" content="<?php echo $babc_pages_list["all"]; ?>">
                 <?php
             }
             
         }else{
             foreach ($babc_pages_list as $page => $color) {
-                if (is_page($page)){
+                if (is_page($page) || is_single($page)){
                     ?>
                     <!-- Chrome, Samsung internet -->
                     <meta name="theme-color" content="<?php echo $color; ?>">
-                    <!-- Windows Phone -->
-                    <meta name="msapplication-navbutton-color" content="<?php echo $color; ?>">
-                    <!-- iOS Safari -->
-                    <meta name="apple-mobile-web-app-status-bar-style" content="<?php echo $color; ?>">
-                    <meta name="theme-color" content="<?php echo $color; ?>">
                     <?php
                 };
-            } //loop over $babc_pages_list, check every page, and call by color;
+            } //loop over $babc_pages_list, check every page and post, and call by color;
         }
 
     }

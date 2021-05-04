@@ -8,17 +8,17 @@ Author URI: https://github.com/MMBass
 Author: Mendi Bass
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Requires at least: 3.0
+Requires at least: 4.6
 Tested up to: 5.7
-Stable tag: 1.0 
+Stable tag: 2.0 
 
 == Description ==
 
-paint the top address bar of a selected page, you can choose every page different color.
+Paint the top address bar of a selected page, you can choose different color for every page.
 
-doesnt work in desktop browsers yet, 
+Doesn't work in desktop browsers yet, 
 working on all those mobile browsers: 
-Chrome, Samsung Internet, Safari IOS (apple).
+Chrome, Samsung Internet.
 
 == Installation ==
 
@@ -37,24 +37,28 @@ Or:
 4. In the wordpress menu click the 'Appearance' and you will see the new "Address bar color" settings page, there you can activate and manage the pages and the colors.
 
 == Screenshots ==
-1. 
+1. the result
 2. the new menu item 
 3. the settings page
 
 == Changelog ==
 = 1.0 =
 * First upload
+= 2.0 =
+* Option to color single post, bug fixed
+
+== Upgrade Notice ==
+= 2.0 =
+bug fixed, color single post- not just pages
 
 == Frequently Asked Questions ==
 
-= what's your plugin's specialty? = 
+= What's your plugin's specialty? = 
 
-you can choose different colors for each page of your site, not only one for all of them
+You can choose different colors for each page of your site or even every post, not only one for all of them
 
 = Why it doesn't work on desktop browsers? =
 
 For now the plugin is not functional in desktop browsers but according to google it should be available soon in chrome for PC.
-
-== Upgrade Notice ==
 
 == Donations ==

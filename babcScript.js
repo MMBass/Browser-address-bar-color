@@ -2,6 +2,8 @@ const babc_color_inputs_list = document.getElementsByClassName("color-inputs");
 const babc_check_inputs_list = document.getElementsByClassName("check-inputs");
 const babc_txt_cover_input = document.getElementsByClassName("txt-cover-input");
 const babc_check_cover_input = document.getElementsByClassName("check-cover-input");
+
+const babc_main_div = document.getElementById("babc_main_div");
 const babc_inp_all = document.getElementById("input_all");
 const babc_cbox_all = document.getElementById("cbox_all");
 const babc_txt_inp_all = document.getElementById("txt-cover-inp-all");
@@ -51,11 +53,11 @@ function babc_all_inputs_cover(){
         babc_color_inputs_list[i].style.display = "none";
         babc_check_inputs_list[i].style.display = "none";
         babc_check_cover_input[i].style.display = "inline-block";
-          babc_txt_cover_input[i].style.display = "block";
+        babc_txt_cover_input[i].style.display = "block";
       }
       if(!babc_cbox_all.checked){
         babc_check_cover_input[i].style.display = "none";
-          babc_check_inputs_list[i].style.display = "inline-block";
+        babc_check_inputs_list[i].style.display = "inline-block";
 
           if(babc_check_inputs_list[i].checked){
             babc_color_inputs_list[i].style.display = "block";
@@ -65,12 +67,10 @@ function babc_all_inputs_cover(){
   };
 }
 
-
 // Clicking one page:
 for(let i = 0; i < babc_check_inputs_list.length; i++){
   babc_check_inputs_list[i].addEventListener("click",()=>{
       if(!babc_cbox_all.checked){
-          setTimeout(() => {
             if(babc_check_inputs_list[i].checked){
               babc_color_inputs_list[i].style.display = "block";
               babc_txt_cover_input[i].style.display = "none";
@@ -79,7 +79,12 @@ for(let i = 0; i < babc_check_inputs_list.length; i++){
               babc_color_inputs_list[i].style.display = "none";
               babc_txt_cover_input[i].style.display = "block";
             }  
-          }, 1); // making this change async
       }
   });
 };
+
+function displaySettings(){
+  babc_main_div.style.visibility  = "visible";
+}
+displaySettings();//display the main div after building all inputs set
+
