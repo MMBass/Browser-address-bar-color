@@ -8,6 +8,9 @@ const babc_inp_all = document.getElementById("input_all");
 const babc_cbox_all = document.getElementById("cbox_all");
 const babc_txt_inp_all = document.getElementById("txt-cover-inp-all");
 
+const babc_search_inp_ge = document.getElementById("search_page_inp");
+const babc_search_inp_st = document.getElementById("search_post_inp");
+
 if(babc_cbox_all.checked){
   babc_all_inputs_cover();
   babc_inp_all.style.display = "block";
@@ -88,3 +91,22 @@ function displaySettings(){
 }
 displaySettings();//display the main div after building all inputs set
 
+babc_search_inp_ge.onkeyup = ()=>{babc_search_in("ge")};
+babc_search_inp_st.onkeyup = ()=>{babc_search_in("st")};
+
+function babc_search_in(type){
+  const str_s = (type === "ge") ? babc_search_inp_ge.value : babc_search_inp_st.value;
+
+    const items_for_s = document.getElementsByClassName("item_"+type);
+    console.log(items_for_s)
+
+    Array.prototype.forEach.call(items_for_s, function (item) {
+      if(!item.getAttribute("data-sename").indexOf(str_s)> -1){
+        item.style.display = "none";
+      }
+      if(item.getAttribute("data-sename").indexOf(str_s)> -1){
+        item.style.display = "block";
+      }
+    });
+  
+}

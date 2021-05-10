@@ -10,7 +10,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 5.7
-Stable tag: 2.0 
+Stable tag: 3.0 
 
 == Description ==
 
@@ -46,6 +46,8 @@ Or:
 * First upload
 = 2.0 =
 * Option to color single post, bug fixed
+= 3.0 =
+* Search pages in list
 
 == Upgrade Notice ==
 = 2.0 =
