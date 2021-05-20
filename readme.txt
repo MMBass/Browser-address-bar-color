@@ -38,8 +38,8 @@ Or:
 
 == Screenshots ==
 1. the result
-2. the new menu item 
-3. the settings page
+2. the settings page
+3. the new menu item 
 
 == Changelog ==
 = 1.0 =
@@ -47,7 +47,7 @@ Or:
 = 2.0 =
 * Option to color single post, bug fixed
 = 3.0 =
-* Search pages in list
+* Search pages in the list
 
 == Upgrade Notice ==
 = 2.0 =

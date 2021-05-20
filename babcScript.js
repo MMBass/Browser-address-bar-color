@@ -96,17 +96,14 @@ babc_search_inp_st.onkeyup = ()=>{babc_search_in("st")};
 
 function babc_search_in(type){
   const str_s = (type === "ge") ? babc_search_inp_ge.value : babc_search_inp_st.value;
+  const items_for_s = document.getElementsByClassName("item_"+type);
 
-    const items_for_s = document.getElementsByClassName("item_"+type);
-    console.log(items_for_s)
-
-    Array.prototype.forEach.call(items_for_s, function (item) {
-      if(!item.getAttribute("data-sename").indexOf(str_s)> -1){
-        item.style.display = "none";
-      }
-      if(item.getAttribute("data-sename").indexOf(str_s)> -1){
-        item.style.display = "block";
-      }
-    });
-  
+  Array.prototype.forEach.call(items_for_s, function (item) {
+    if(!item.getAttribute("data-sename").toLowerCase().indexOf(str_s.toLowerCase())> -1){
+      item.style.display = "none";
+    }
+    if(item.getAttribute("data-sename").toLowerCase().indexOf(str_s.toLowerCase())> -1){
+      item.style.display = "block";
+    }
+  });
 }
