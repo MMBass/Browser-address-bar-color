@@ -9,7 +9,7 @@ Plugin URI: https://github.com/MMBass/theme_color_plugin_for_wordpress
 Description: Custom URL bar color for each page of your site. Currently only works in mobile browsers.
 Author: Mendi Bass
 Author URI: https://github.com/MMBass
-Version: 3.0
+Version: 3.3
 License: GPL v2 or later
 Text Domain: browser-address-bar-color 
 Domain Path: /languages
@@ -22,8 +22,8 @@ if ( !defined( 'ABSPATH' ) ){
 function babcOnActivate(){
     if(!get_option('babc_pages_list')){
         // add a new option - '$new_babc_pages_list' by default on plugin's start;
-        add_option('babc_pages_list', $new_babc_pages_list);
-    }
+        add_option('babc_pages_list',array());
+    } 
 }
 register_activation_hook( __FILE__, 'babcOnActivate' );
 
@@ -44,7 +44,6 @@ function babcLinkToSettingsPage($links) {
 
 function babcThemeColorSettingsPage(){
     $new_babc_pages_list = array();
-    $babc_curr_pages_arr = get_option('babc_pages_list');
 
     wp_enqueue_script( 'babc-script', plugins_url('babcScript.js', __FILE__ ));
 
@@ -97,7 +96,7 @@ function babcHeadAdd(){
         if (array_key_exists("all",$babc_pages_list )){
             if(!empty($babc_pages_list["all"])){
                 ?>
-                <!-- Chrome, Samsung internet -->
+                <!-- Chrome mobile, Samsung internet -->
                 <meta name="theme-color" content="<?php echo $babc_pages_list["all"]; ?>">
                 <?php
             }
@@ -106,7 +105,7 @@ function babcHeadAdd(){
             foreach ($babc_pages_list as $page => $color) {
                 if (is_page($page) || is_single($page)){
                     ?>
-                    <!-- Chrome, Samsung internet -->
+                    <!-- Chrome mobile, Samsung internet -->
                     <meta name="theme-color" content="<?php echo $color; ?>">
                     <?php
                 };

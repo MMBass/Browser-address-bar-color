@@ -9,8 +9,8 @@ Author: Mendi Bass
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
-Tested up to: 5.8
-Stable tag: 3.0 
+Tested up to: 5.9
+Stable tag: 3.3 
 
 == Description ==
 
@@ -48,10 +48,16 @@ Or:
 * Option to color single post, bug fixed
 = 3.0 =
 * Search pages in the list
+= 3.2 =
+* PHP 8 compatibility
+= 3.3 =
+* tested up to wordpress 5.9, bug fixed
 
 == Upgrade Notice ==
 = 2.0 =
 bug fixed, color single post- not just pages
+= 3.2 =
+*  older versions won't work with PHP 8 !
 
 == Frequently Asked Questions ==
 

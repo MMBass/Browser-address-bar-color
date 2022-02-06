@@ -43,5 +43,5 @@ msgid "Browser Address Bar Color"
 msgstr ""
 
 #: babcSettingsPage.php:15
-msgid "All pages and posts"
+msgid "All pages:"
 msgstr ""
