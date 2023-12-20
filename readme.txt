@@ -16,9 +16,8 @@ Stable tag: 3.3
 
 Paint the top address bar of a selected page, you can choose different color for every page.
 
-Doesn't work in desktop browsers yet, 
-working on all those mobile browsers: 
-Chrome, Samsung Internet.
+* Not supported yet in desktop browsers, 
+Works on Chrome and Samsung Internet mobile browsers
 
 == Installation ==
 
@@ -51,7 +50,7 @@ Or:
 = 3.2 =
 * PHP 8 compatibility
 = 3.3 =
-* tested up to wordpress 5.9, bug fixed
+* tested up to wordpress 6.3, bug fixed
 
 == Upgrade Notice ==
 = 2.0 =
@@ -63,10 +62,10 @@ bug fixed, color single post- not just pages
 
 = What's your plugin's specialty? = 
 
-You can choose different colors for each page of your site or even every post, not only one for all of them
+You can choose different color for each page of your site or even every post, not only one for all
 
 = Why it doesn't work on desktop browsers? =
 
-For now the plugin is not functional in desktop browsers but according to google it should be available soon in chrome for PC.
+For now this Html feature (theme-color tag) supported by mobile browsers only
 
 == Donations ==
