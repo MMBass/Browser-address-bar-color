@@ -31,7 +31,7 @@ function babc_disable_unselected(){
         babc_color_inputs_list[i].style.display = "block";
         babc_check_inputs_list[i].style.display = "inline-block";
         babc_check_cover_input[i].style.display = "none";
-          babc_txt_cover_input[i].style.display = "none";
+        babc_txt_cover_input[i].style.display = "none";
       }
   }  
 }; // loop and disable on page start

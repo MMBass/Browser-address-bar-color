@@ -56,8 +56,8 @@ function babcThemeColorSettingsPage(){
           if( preg_match($babc_colors_pattern, $babc_all_color) === 1){
             $new_babc_pages_list = array("all" => $babc_all_color);
             update_option('babc_pages_list',$new_babc_pages_list );
-          }// regex check valid color pattern
-         }// set the same color for all pages
+          } // regex check valid color pattern
+         } // set the same color for all pages
          elseif (!isset($_POST['check-color-all'])){
 
             if(isset($new_babc_pages_list["all"])){

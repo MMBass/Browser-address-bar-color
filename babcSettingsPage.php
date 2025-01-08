@@ -4,15 +4,19 @@
             </h2>
         </div>
         
-        <form style="" target="_self"  method="POST">    
+        <form style="" target="_self"  method="POST">   
+        <div style= "margin-inline-start: 5px;">
+             <?php echo submit_button() ?> 
+            </div>
+
            <input type="hidden" name="color-posted">    
             <br>
             
             <div id="babc_pages_div">
               <div style="background-color: #fff; padding: 4px; direction: ltr; margin-top: 5px; height:40px;">
-                <div style="float: left;">
+                <div style="float: left; height: 100%;">
                     <input type="checkbox" id="cbox_all" name="check-color-all" style=" "<?php echo isset(get_option('babc_pages_list')["all"]) ? "checked" : null; ?>>
-                    <p style="color: #3e4347; display: inline; font-size:20px; font-weight: 600;"><?php echo esc_html_e( 'All pages and posts ', 'browser-address-bar-color' ) ?> </p>
+                    <p style="color: #3e4347; display: inline-block; margin: auto; margin-inline-start: 5px; padding-top: 5px; font-size:17px; font-weight: 600;"><?php echo esc_html_e( 'All pages and posts ', 'browser-address-bar-color' ) ?> </p>
                 </div> 
                <input type="color" id="input_all" name="input-color-all" style="width:50%; padding: 2px 8px; height:35px; float: right; box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.1);"
                <?php
@@ -76,14 +80,15 @@
                     $babc_option .= $page->post_title;
                     $babc_option .= '">';
                     
-                        $babc_option .= '<div style="float: left;">';
+                        $babc_option .= '<div style="float: left; height: 100%;">';
                             $babc_option .= ' <input type="checkbox" id="" class="check-inputs" name="check-color-';
                             $babc_option .= $page->ID;
                             $babc_option .= '" style="display:inline-block;" ';
                             $babc_option .= $curr_checked;
                             $babc_option .= '>';
                             $babc_option .= '<input type="checkbox" class="check-cover-input" style="display: none;" checked disabled>';
-                            $babc_option .= '<p style="font-size: 20px; color: #0970be; display: inline; font-weight: 600;">';
+                            $babc_option .= '<p style="font-size: 17px; color: #0970be; display: inline-block; font-weight: 600; margin: auto; margin-inline-start: 5px; padding-top: 5px;
+                            ">';
                             $babc_option .= $page->post_title;
                             $babc_option .= '</p>';
                             if($page->need_post_name){
@@ -149,14 +154,15 @@
                     $babc_option .= $post->post_title;
                     $babc_option .= '">';
                     
-                        $babc_option .= '<div style="float: left;">';
+                        $babc_option .= '<div style="float: left; height: 100%;">';
                             $babc_option .= ' <input type="checkbox" id="" class="check-inputs" name="check-color-';
                             $babc_option .= $post->ID;
                             $babc_option .= '" style="display:inline-block;" ';
                             $babc_option .= $curr_checked;
                             $babc_option .= '>';
                             $babc_option .= '<input type="checkbox" class="check-cover-input" style="display: none;" checked disabled>';
-                            $babc_option .= '<p style="font-size: 20px; color: #0970be; display: inline; font-weight: 600;">';
+                            $babc_option .= '<p style="font-size: 17px; color: #0970be; display: inline-block; font-weight: 600; margin: auto; margin-inline-start: 5px; padding-top: 5px;
+                            ">';
                             $babc_option .= $post->post_title;
                             $babc_option .= '</p>';
                             if($post->need_post_name){
