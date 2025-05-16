@@ -9,7 +9,7 @@ Plugin URI: https://github.com/MMBass/theme_color_plugin_for_wordpress
 Description: Custom URL bar color for each page of your site. Currently only works in mobile browsers.
 Author: Mendi Bass
 Author URI: https://github.com/MMBass
-Version: 3.3
+Version: 3.4.0
 License: GPL v2 or later
 Text Domain: browser-address-bar-color 
 Domain Path: /languages
@@ -45,49 +45,55 @@ function babcLinkToSettingsPage($links) {
 function babcThemeColorSettingsPage(){
     $new_babc_pages_list = array();
 
-    wp_enqueue_script( 'babc-script', plugins_url('babcScript.js', __FILE__ ));
+    wp_enqueue_script( 'babc-script', plugins_url('babcScript.js', __FILE__ ), array(), '1.0.2', true );
+    
+    if( isset($_POST['color-posted'])) {
 
-    if(isset($_POST['color-posted'])){
-
-        $babc_colors_pattern = "(#([\da-f]{3}){1,2}|(rgb|hsl)a\((\d{1,3}%?,\s?){3}(1|0?\.\d+)\)|(rgb|hsl)\(\d{1,3}%?(,\s?\d{1,3}%?){2}\))";
-   
-        if (isset($_POST['input-color-all']) && isset($_POST['check-color-all'])) {
-          $babc_all_color = sanitize_text_field($_POST['input-color-all']);
-          if( preg_match($babc_colors_pattern, $babc_all_color) === 1){
-            $new_babc_pages_list = array("all" => $babc_all_color);
-            update_option('babc_pages_list',$new_babc_pages_list );
-          } // regex check valid color pattern
-         } // set the same color for all pages
-         elseif (!isset($_POST['check-color-all'])){
-
-            if(isset($new_babc_pages_list["all"])){
-               unset($new_babc_pages_list["all"]);
+            // Verify the nonce for security
+            if ( ! isset( $_POST['babc_nonce_field'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['babc_nonce_field'] ) ), 'babc_action' ) ) {
+                wp_die( 'Security check failed' );
             }
 
-           foreach($_POST as $key => $value){
-            
-             if (strpos($key, 'input-color-') !== false){
-                $babc_color_from_input = sanitize_text_field($value);
-                if( preg_match($babc_colors_pattern, $babc_color_from_input) === 1){
-
-                    $babc_page_id = str_replace( "input-color-" , "" , sanitize_text_field($key));
-              
-                    if(isset($_POST['check-color-'.$babc_page_id])){
-                    
-                        $new_babc_pages_list[$babc_page_id] = $babc_color_from_input;
- 
-                    }
+        
+            $babc_colors_pattern = "(#([\da-f]{3}){1,2}|(rgb|hsl)a\((\d{1,3}%?,\s?){3}(1|0?\.\d+)\)|(rgb|hsl)\(\d{1,3}%?(,\s?\d{1,3}%?){2}\))";
+    
+            if (isset($_POST['input-color-all']) && isset($_POST['check-color-all'])) {
+                $babc_all_color = sanitize_text_field(wp_unslash($_POST['input-color-all']));
+                if( preg_match($babc_colors_pattern, $babc_all_color) === 1){
+                    $new_babc_pages_list = array("all" => $babc_all_color);
+                    update_option('babc_pages_list',$new_babc_pages_list );
                 } // regex check valid color pattern
-             }
-           } // loop over the post array;
+            } // set the same color for all pages
+            elseif (!isset($_POST['check-color-all'])){
 
-           update_option('babc_pages_list',$new_babc_pages_list);
-         };// check and set for specific pages 
-    }
+                if(isset($new_babc_pages_list["all"])){
+                    unset($new_babc_pages_list["all"]);
+                }
 
-    require_once("babcSettingsPage.php");
+            foreach($_POST as $key => $value){
+                
+                if (strpos($key, 'input-color-') !== false){
+                    $babc_color_from_input = sanitize_text_field($value);
+                    if( preg_match($babc_colors_pattern, $babc_color_from_input) === 1){
 
+                        $babc_page_id = str_replace( "input-color-" , "" , sanitize_text_field($key));
+                
+                        if(isset($_POST['check-color-'.$babc_page_id])){
+                        
+                            $new_babc_pages_list[$babc_page_id] = $babc_color_from_input;
+    
+                        }
+                    } // regex check valid color pattern
+                }
+            } // loop over the post array;
+
+            update_option('babc_pages_list',$new_babc_pages_list);
+            };// check and set for specific pages 
+        }
+
+        require_once("babcSettingsPage.php");
 }
+ 
 
 function babcHeadAdd(){
     if(get_option('babc_pages_list')){
@@ -97,7 +103,7 @@ function babcHeadAdd(){
             if(!empty($babc_pages_list["all"])){
                 ?>
                 <!-- Chrome mobile, Samsung internet -->
-                <meta name="theme-color" content="<?php echo $babc_pages_list["all"]; ?>">
+                <meta name="theme-color" content="<?php echo esc_attr($babc_pages_list["all"]) ?>">
                 <?php
             }
             
@@ -106,10 +112,10 @@ function babcHeadAdd(){
                 if (is_page($page) || is_single($page)){
                     ?>
                     <!-- Chrome mobile, Samsung internet -->
-                    <meta name="theme-color" content="<?php echo $color; ?>">
+                    <meta name="theme-color" content="<?php echo esc_attr($color) ?>">
                     <?php
                 };
-            } //loop over $babc_pages_list, check every page and post, and call by color;
+            } // Loop over $babc_pages_list, check every page and post, and call by color;
         }
 
     }

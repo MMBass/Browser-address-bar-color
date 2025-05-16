@@ -3,14 +3,16 @@
 Contributors: mendibass
 Plugin Name: Browser Address Bar Color 
 Plugin URI:  https://github.com/MMBass/theme_color_plugin_for_wordpress
-Tags: address bar, browser, theme color,meta tag, url bar, uri  bar, address bar color, mobile theme color
+Tags: address bar, theme color, meta tag, url bar, address bar color
 Author URI: https://github.com/MMBass
 Author: Mendi Bass
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
-Tested up to:  6.7.1
-Stable tag: 3.3 
+Tested up to:  6.8
+Stable tag: 3.4.0
+
+Customize your mobile browsing experience by setting theme colors for the address bar of your pages on your WordPress site
 
 == Description ==
 
@@ -51,12 +53,16 @@ Or:
 * PHP 8 compatibility
 = 3.3 =
 * tested up to wordpress 6.3, bug fixed
+= 3.4 =
+* Tested up to wordpress 6.8, security and style enhancements
 
 == Upgrade Notice ==
 = 2.0 =
-bug fixed, color single post- not just pages
+Bug fixed, color single post- not just pages.
 = 3.2 =
-*  older versions won't work with PHP 8 !
+Older versions won't work with PHP 8 !
+= 3.4 =
+Security fixes, update needed.
 
 == Frequently Asked Questions ==
 
