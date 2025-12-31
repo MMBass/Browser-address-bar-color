@@ -9,7 +9,7 @@ Plugin URI: https://github.com/MMBass/theme_color_plugin_for_wordpress
 Description: Custom URL bar color for each page of your site. Currently only works in mobile browsers.
 Author: Mendi Bass
 Author URI: https://github.com/MMBass
-Version: 3.4.0
+Version: 4.1
 License: GPL v2 or later
 Text Domain: browser-address-bar-color 
 Domain Path: /languages
@@ -50,8 +50,11 @@ function babcThemeColorSettingsPage(){
     if( isset($_POST['color-posted'])) {
 
             // Verify the nonce for security
-            if ( ! isset( $_POST['babc_nonce_field'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['babc_nonce_field'] ) ), 'babc_action' ) ) {
-                wp_die( 'Security check failed' );
+            if (
+                 ! isset( $_POST['babc_settings_nonce'] ) || 
+                 ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['babc_settings_nonce'] ) ), 'babc_settings_nonce' )
+                  ) {
+                wp_die( esc_html__( 'Security check failed', 'browser-address-bar-color' ) );
             }
 
         
@@ -96,9 +99,8 @@ function babcThemeColorSettingsPage(){
  
 
 function babcHeadAdd(){
-    if(get_option('babc_pages_list')){
-
-        $babc_pages_list = get_option('babc_pages_list');
+    $babc_pages_list = get_option('babc_pages_list');
+    if($babc_pages_list && is_array($babc_pages_list)){
         if (array_key_exists("all",$babc_pages_list )){
             if(!empty($babc_pages_list["all"])){
                 ?>
@@ -125,5 +127,14 @@ function babcHeadAdd(){
 if(get_option('babc_pages_list')){
    add_action('wp_head','babcHeadAdd' );
 }
+
+// Clear cache on post save/delete to ensure settings page list is up to date
+function babc_clear_post_cache($post_id, $post) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    $post_type = ($post) ? $post->post_type : get_post_type($post_id);
+    wp_cache_delete('babc_items_' . $post_type, 'browser_address_bar_color');
+}
+add_action('save_post', 'babc_clear_post_cache', 10, 2);
+add_action('deleted_post', 'babc_clear_post_cache', 10, 2);
 
 ?>

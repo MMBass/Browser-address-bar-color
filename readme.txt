@@ -9,8 +9,8 @@ Author: Mendi Bass
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
-Tested up to:  6.8
-Stable tag: 3.4.0
+Tested up to: 6.9
+Stable tag: 4.1
 
 Customize your mobile browsing experience by setting theme colors for the address bar of your pages on your WordPress site
 
@@ -52,10 +52,18 @@ Or:
 = 3.2 =
 * PHP 8 compatibility
 = 3.3 =
-* tested up to wordpress 6.3, bug fixed
+* Tested up to wordpress 6.3, bug fixed
 = 3.4 =
 * Tested up to wordpress 6.8, security and style enhancements
-
+= 3.5 =
+* Bug fixed, Tested up to wordpress 6.9
+= 4.0 =
+* Major Update: Added support for Custom Post Types (WooCommerce, Portfolios, etc.)
+* Performance: Optimized database queries and added lazy loading for large lists
+* UI: New side-by-side layout with dynamic search and pagination
+= 4.1 =
+* Minor bug fixes.
+ 
 == Upgrade Notice ==
 = 2.0 =
 Bug fixed, color single post- not just pages.
@@ -63,6 +71,10 @@ Bug fixed, color single post- not just pages.
 Older versions won't work with PHP 8 !
 = 3.4 =
 Security fixes, update needed.
+= 4.0 =
+Major update: Support for Custom Post Types, performance optimizations, and UI improvements.
+= 4.1 =
+Bug fixes
 
 == Frequently Asked Questions ==
 
