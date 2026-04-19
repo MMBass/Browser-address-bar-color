@@ -10,7 +10,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
 Tested up to: 6.9
-Stable tag: 4.1
+Stable tag: 4.2
 
 Customize your mobile browsing experience by setting theme colors for the address bar of your pages on your WordPress site
 
@@ -24,7 +24,7 @@ Works on Chrome and Samsung Internet mobile browsers
 == Installation ==
 
 1. From your WordPress Dashboard go to 'Plugins' > 'Add new' and search for 'Browser Address Bar Color'.
-2. Click 'Install Now' under the title of the Call Now Button plugin
+2. Click 'Install Now' under the title of the Browser Address Bar Color Button plugin
 3. Click 'activate'
 4. In the wordpress menu click the 'Appearance' and you will see the new "Address bar color" settings page, there you can activate and manage the pages and the colors.
 
@@ -62,7 +62,9 @@ Or:
 * Performance: Optimized database queries and added lazy loading for large lists
 * UI: New side-by-side layout with dynamic search and pagination
 = 4.1 =
-* Minor bug fixes.
+* Minor bug fixes
+= 4.2 =
+* Readme update
  
 == Upgrade Notice ==
 = 2.0 =
